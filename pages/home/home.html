@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Percent Off Calculator</h2>
+  <p>
+    Our percent off calculator helps you determine how much will you save during a sale, when the whole selection of merchandise is "X percent off!". Keep on reading - if you don't know how to figure out percentages, this calculator will surely save you a lot of trouble.
+  </p>
+  <p>
+    Source: https://www.omnicalculator.com/finance/percent-off
+  </p>
+  <p>
+    By: Joshua Oteyza, Luis Osero, Ynigo Ryena. 
+  </p> 
+<br /> 
+
+<ion-item>
+  <ion-label>Original Price:</ion-label>
+  <ion-input type="number" [(ngModel)]="original_price"></ion-input>
+</ion-item> 
+<ion-item> 
+  <ion-label>Percent Off:</ion-label>
+  <ion-input type="number" [(ngModel)]="percent_off"></ion-input>
+</ion-item> 
+<ion-item> 
+  <ion-label>Sales Tax:</ion-label>
+  <ion-input type="number" [(ngModel)]="sales_tax"></ion-input>
+  </ion-item>
+   
+<button ion-button color="secondary" (click)="calculatePERCENTOFF ()">CALCULATE
+  </button>
+
+<ion-item *ngIf="percent_off">
+  <h2>Final Price: {{finalprice}}<code></code></h2>
+  <h2>Savings: {{savings}}<code></code></h2>
+  </ion-item> 
+ 
